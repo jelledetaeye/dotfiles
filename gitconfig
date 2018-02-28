@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = jelle
+  email = jelle.jdc@gmail.com
+
+[alias]
+    g = grep --break --heading --line-number
+    s = status
+    d = diff
+    b = branch
+    l = log
+    c = checkout
+    cm = commit -m
+    st = stash
+    stp = stash pop
+    bd = branch -D
+    lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(blue)<%an>%C(reset)' --abbrev-commit --date=relative
+
