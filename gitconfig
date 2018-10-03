@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = jelle
-  email = jelle.jdc@gmail.com
+	name = jvanhorenbeke
+	email = jelle.jdc@gmail.com
 
 [alias]
     g = grep --break --heading --line-number
@@ -17,3 +17,10 @@
     bd = branch -D
     lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(blue)<%an>%C(reset)' --abbrev-commit --date=relative
 
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[http]
+	postBuffer = 1048576000
